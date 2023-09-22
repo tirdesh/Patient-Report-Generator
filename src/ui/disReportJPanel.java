@@ -114,7 +114,6 @@ public class disReportJPanel extends javax.swing.JPanel {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
 
         lblProfilePic.setIcon(new javax.swing.ImageIcon("C:\\Users\\hotra\\OneDrive\\Pictures\\Camera Roll\\WIN_20210919_12_27_45_Pro.jpg")); // NOI18N
-        lblProfilePic.setText("jLabel2");
         lblProfilePic.setDoubleBuffered(true);
         jPanel1.add(lblProfilePic, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 130, 140));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 540, 10));
@@ -495,7 +494,7 @@ public class disReportJPanel extends javax.swing.JPanel {
         lblInsuranceDeductable.setText(patient.getInsurance().getDeductable());
         lblInsuranceId.setText(patient.getInsurance().getIdentificationNumber());
         lblInsurancePremium.setText(patient.getInsurance().getPremiumYearly());
-        lblPatientAddress.setText(address.getCity()+","+address.getState()+","+address.getCountry());
+        lblPatientAddress.setText(address.getCity()+", "+address.getState()+", "+address.getCountry());
         lblPatientAllergies.setText(patient.getAllergies().toString());
         lblPatientDrinks.setText(patient.getDrinking().toString());
         lblPatientGender.setText(person.getGender());
@@ -510,11 +509,6 @@ public class disReportJPanel extends javax.swing.JPanel {
         lblProfilePic.setIcon(new ImageIcon(person.getProfilePicPath()));
         
         //netbeans console output
-        String title = "Personal Information";
-        System.out.println("*".repeat(title.length()));
-        System.out.println(title);
-        System.out.println("*".repeat(title.length()));
-        
         /*
         for (Method m : person.getClass().getMethods()) {
             if (m.getName().startsWith("get") && m.getParameterTypes().length == 0) {
@@ -527,6 +521,11 @@ public class disReportJPanel extends javax.swing.JPanel {
             }
         }
         */
+        String title = "Personal Information";
+        System.out.println("*".repeat(title.length()));
+        System.out.println(title);
+        System.out.println("*".repeat(title.length()));
+        
     
         System.out.println("First Name: "+ person.getFirstName());
         System.out.println("Last Name: "+ person.getLastName());
@@ -549,13 +548,6 @@ public class disReportJPanel extends javax.swing.JPanel {
         System.out.println("City: "+ address.getCity());
         System.out.println("State: "+ address.getState());
         System.out.println("Country: "+ address.getCountry());
-
-        title = "Driver Information";
-        System.out.println("*".repeat(title.length()));
-        System.out.println(title);
-        System.out.println("*".repeat(title.length()));
-        
-        System.out.println("Driver License: "+ driver.getDriverLicense());
 
         title = "Patient Information";
         System.out.println("*".repeat(title.length()));
@@ -582,14 +574,6 @@ public class disReportJPanel extends javax.swing.JPanel {
         System.out.println("Deductable: "+ insurance.getDeductable());
         System.out.println("Addl Benefits: "+ insurance.getAddlBenefits());
 
-        title = "Vehicle Information";
-        System.out.println("*".repeat(title.length()));
-        System.out.println(title);
-        System.out.println("*".repeat(title.length()));
-        
-        System.out.println("Model: "+ vehicle.getModel());
-        System.out.println("Serial: "+ vehicle.getSerial());
-        System.out.println("Colour: "+ vehicle.getColour());
 
         title = "Doctor Information";
         System.out.println("*".repeat(title.length()));
@@ -603,8 +587,25 @@ public class disReportJPanel extends javax.swing.JPanel {
         System.out.println("Experience: "+ doctor.getExperience());
         System.out.println("Certified Board: "+ doctor.getCertifiedBoard());
         System.out.println("Contact Info: "+ doctor.getContactInfo());
+                
         
+        title = "Driver Information";
+        System.out.println("*".repeat(title.length()));
+        System.out.println(title);
+        System.out.println("*".repeat(title.length()));
         
+        System.out.println("Driver License: "+ driver.getDriverLicense());
+
+
+        title = "Vehicle Information";
+        System.out.println("*".repeat(title.length()));
+        System.out.println(title);
+        System.out.println("*".repeat(title.length()));
+        
+        System.out.println("Model: "+ vehicle.getModel());
+        System.out.println("Serial: "+ vehicle.getSerial());
+        System.out.println("Colour: "+ vehicle.getColour());
+
     }
     
 }
